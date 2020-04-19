@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+/*  GERAL  */
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*  HEADER  */
+
+.header {
+  border-bottom: 2px inset #c4c4c480;
+}
+
+.header__figures {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.7em 0.3em 0.3em 0em;
+}
+
+.logo {
+  width: 42%;
+}
+
+.header__figures > i {
+  font-size: 0.7em;
+}
+
+/*  STORIES  */
+
+.main--background {
+  background-color: #f0f0f093;
+  padding-top: 0.8em;
+}
+
+.stories {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.stories--active {
+  width:  85px;
+  height: 83px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(245, 82, 12) 3%, rgba(212,19,129,1) 45%, rgb(255, 1, 35) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0em 0.9em;
+}
+
+.stories--active > span {
+  width:  76px;
+  height: 76px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.stories--active > span > img {
+  margin: 1.8px;
+}
+
+.stories img {
+  width: 3em;
+  border-radius: 50%;
+}
+
+/*  FEED  */
+
+.feed__card--padding {
+  padding: 0.4em 0.7em 0.4em 0.3em;
+}
+
+.feed__card--profile {
+  border-radius: 50%;
+  margin-right: 0.4em;
+}
+
+.feed {
+  padding-top: 1.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.feed__card {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border: 2px solid #c4c4c480;
+  border-radius: 12px;
+  margin-bottom: 1.5em;
+}
+
+.feed__card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feed__card__header > div {
+  width: 170px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.feed__card__header img {
+  max-width: 45px;
+}
+
+.feed__card__header p {
+  font-size: 0.6em;
+  font-weight: bolder;
+}
+
+.feed__card__header > i {
+  font-size: 0.7em;
+}
+
+.feed__card__photo {
+  margin: 0;
+}
+
+.feed__card__photo > img {
+  width: 100%;
+}
+
+.feed__card__icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feed__card__icons > div {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.feed__card__icons i {
+  font-size: 1.2em;
+}
+
+.feed__card__footer {
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.3em 0em 0.2em 0.3em;
+}
+
+.feed__card__footer > img {
+  max-width: 35px;
+}
+
+.feed__card__footer p {
+  font-size: 0.5em;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .feed__card--padding {
+    padding: 0.2em 0.7em 0.3em 0.3em;
+  }
+
+  .logo {
+    width: 25%;
+  }
+
+  .header__figures > i {
+    font-size: 0.6em;
+  }
+
+  .stories img {
+    width: 2.5em;
+  }
+
+  .stories--active {
+    width:  75px;
+    height: 73px;
+  }
+
+  .stories--active > span {
+    width:  66px;
+    height: 66px;
+  }
+
+  .stories--active > span > img {
+    margin: 3px;
+  }
+
+  .feed__card__header img {
+    max-width: 40px;
+  }
+
+  .feed__card__header p {
+    font-size: 0.5em;
+  }
+
+  .feed__card__header > i {
+    font-size: 0.6em;
+  }
+
+  .feed__card__icons i {
+    font-size: 1em;
+  }
+
+  .feed__card__icons > div {
+    width: 20%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 40%;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 15%;
+  }
+
+  .header__figures > i {
+    font-size: 0.5em;
+  }
+
+  .stories img {
+    width: 2.3em;
+  }
+
+  .stories--active {
+    width:  70px;
+    height: 67px;
+  }
+
+  .stories--active > span {
+    width:  60px;
+    height: 60px;
+  }
+
+  .stories--active > span > img {
+    margin: 2.8px;
+  }
+
+  .feed__card__header img {
+    max-width: 35px;
+  }
+
+  .feed__card__header > i {
+    font-size: 0.5em;
+  }
+
+  .feed__card__icons i {
+    font-size: 0.8em;
+  }
+
+  .feed__card__icons > div {
+    width: 10%;
+  }
+
+  .feed__card__footer > img {
+    max-width: 28px;
+  }
+}
