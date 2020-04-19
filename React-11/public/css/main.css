@@ -1,0 +1,334 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+/*  GERAL  */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+	background-color: #f2f2f2;
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*  HEADER  */
+
+.header-image {
+	background-image: url('../img/capa-madmax2.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px;
+	width: 100%;
+	height: 90vh;
+}
+
+.header-image:after {
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 212, 255, 0) 75%);
+	content: "";
+	left: 0;
+	top: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/*  NAV  */
+
+.header__menu {
+	z-index: 2;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 250px;
+}
+
+.header__navegation {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.header__navegation-text {
+	margin: 0 25px 0;
+	padding: 0;
+	color: #ffffff;
+	font-size: 0.7rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in-out;
+}
+
+.header__navegation-text:hover {
+	color: #e4bb23;
+}
+
+.header__login {
+	display: flex;
+	align-items: center;
+}
+
+.header__login-image {
+	border-radius: 50%;
+	width: 50px;
+    height: 50px;
+}
+
+.header__login-name {
+	margin-left: 20px;
+	color: #ffffff;
+	font-size: 0.7rem;
+	font-weight: bold;
+}
+
+/*  INFORMAÇÕES  */
+
+.header__infos {
+	z-index: 2;
+	position: relative;
+	padding: 0 180px;
+	margin: 0 65px;
+    height: 57vh;
+}
+
+.header__title {
+	color: #ffffff;
+	font-size: 4rem;
+	font-weight: bold;
+	line-height: 4.5rem;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.header__genre {
+	margin: 15px 0 30px;
+	transition: all 0.2s ease-in-out;
+}
+
+.header__genre-text {
+	color: #ffffff;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	margin-right: 18px;
+}
+
+.header__genre-text:hover {
+	color: #e4bb23;
+}
+
+.header__button {
+	display: inline-block;
+	padding: 15px 15px 15px 50px;
+	background-color: #e4bb23;
+	border-radius: 40px;
+	color: #000000;
+	font-size: 0.8rem;
+	position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.header__button:hover {
+	opacity: 0.8;
+}
+
+.margin {
+	margin-left: 15px;
+	font-size: 27px;
+}
+
+.header__location {
+	color: #ffffff;
+	font-size: 0.9rem;
+    margin-top: 48px;
+}
+
+.header__data {
+	color: #e4bb23;
+	font-size: 0.9rem;
+}
+
+/*  MENU DE GÊNEROS  */
+
+.container {
+	width: 72%;
+	margin: 0 auto;
+}
+
+.catalog__menu {
+	display: flex;
+    justify-content: center;
+	padding: 0 20px;
+	margin: 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.catalog__genre-text {
+	color: #e4bb23;
+	display: inline-block;
+	padding: 30px 0;
+	text-transform: uppercase;
+	font-weight: bold;
+    font-size: 0.8rem;
+    transition: all 0.2s ease-in-out;
+	margin-right: 45px;
+}
+
+.catalog__genre-text:hover {
+	border-bottom: 1px solid #e4bb23;
+    transform: scale(1);
+    transition:0,5s all;
+}
+
+/*  CATALOGO DE FILMES  */
+
+.catalog {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 20px 0;
+	width: 100%;
+}
+
+.catalog__item {
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30px;
+	width: 24%;
+}
+
+.catalog__item-poster {
+	margin: 0;
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+
+.catalog__item-poster > img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px 8px 0 0;
+}
+
+.catalog__item-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	padding: 80px 20px;
+	text-align: center;
+	transition: all 0.2s ease-in-out;
+	visibility: hidden;
+	z-index: 1;
+}
+
+/* .catalog__item-info:hover {
+	visibility: visible;
+	opacity: 1;
+} */
+
+.catalog__item-info h2 {
+	color: #e4bb23;
+	font-size: 1.2rem;
+	line-height: 1em;
+	text-transform: uppercase;
+}
+
+.catalog__item-link {
+	color: #ffffff;
+	font-size: 2rem;
+	transition: all 0.2s ease-in-out;
+}
+
+.catalog__item-link:hover {
+	color: #e4bb23;
+}
+
+.catalog__title {
+	padding: 10px 10px 0;
+	margin: 0;
+	font-size: 0.7rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.catalog__genre {
+	padding: 0 10px;
+	color: #e4bb23;
+	font-size: 0.6rem;
+}
+
+.catalog__rate {
+	padding: 0 10px 10px;
+	margin: 10px 0 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.catalog__rate span {
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.catalog__rate-heart {
+	color: #bababa;
+}
+
+.catalog__rate-heart:hover {
+	color: #ff0000;
+}
+
+/*  FOOTER  */
+
+footer {
+	background-color: #ffffff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    padding: 20px 270px;
+}
+
+footer a {
+	color: #bababa;
+	margin: 0 20px;
+	font-size: 40px;
+}
+
+.twitter:hover {
+	color: #47a2db;
+}
+
+.face:hover {
+	color: #0505b6da;
+}
+
+.insta:hover {
+	color: #ff7300;
+}
